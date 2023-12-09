@@ -5,15 +5,41 @@
 
 .container {
     margin-bottom: 2rem;
-    margin-left: 50px;
     background-color: gray;
     width: 100vw;
     height: 20vh;
 }
 
-.container h1 {
-    padding:20px 0 50px 0;
+.nav-container {
+    margin-left: 50px;
 }
+
+.container h1 {
+    margin-left: 15px;
+    padding:20px 0 30px 0;
+}
+.nav-button {
+    border: 1px solid black ;
+    border-radius: 2px;
+    background-color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.nav-button > a {
+    text-decoration: none;
+    color: black;
+}
+.nav-button:hover {
+    background-color: black;
+    transition: all 0.5s ease;
+}
+
+.nav-button > a:hover {
+    color:white;
+    transition: all 0.5s ease;
+}
+
 
 .main {
     display: flex;
@@ -22,14 +48,29 @@
     margin-left: 50px;
 }
 
+.proje {
+    border: 1px solid black ;
+    border-radius: 2px;
+    background-color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.proje:hover {
+    background-color: black;
+    color: white;
+}
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
     margin-left: 50px;
+    gap: 1vw;
 }
 
 .project {
-    flex-basis: 25%;
+    flex-basis: 24%; /*container class'ında gap kullandığımız için 24% olması gerekti.Eğer gap kullanmasaydık sayfada 4 item olması için 25% yapmamız gerekirdi. */
     flex-grow: 0;
     flex-shrink: 0;
     padding: 10px;
@@ -42,23 +83,29 @@
 
 .footer {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center ;
+    flex-direction: column;
+    justify-content: center;
     width: 100vw;
-    height: 20vh;
+    height: 25vh;
     background-color: gray;
+    gap: 15px;
 }
 
-.footer div {
-    flex-basis: 100%;
+.footer > * {
     flex-grow: 0;
-    flex-shrink: 0;
-    padding-top: 30px;
+    flex-shrink: 1;
     text-align: center;
 }
 
-.button {
+.contact-me {
     border: 1px solid black ;
+    border-radius: 2px;
     background-color: white;
-    padding: 15px 30px 15px 30px;
+    cursor: pointer;
+    padding: 10px 30px 10px 30px;
+}
+
+.contact-me:hover {
+    background-color: black;
+    color: white;
 }
